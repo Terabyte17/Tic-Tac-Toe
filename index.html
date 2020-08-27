@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href="style.css"/>
+    <title>Tic Tac Toe</title>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="center">
+        <p class="heading">Choose Game Type:    </p>
+        <button class="buttons" onclick=game_type(0)>Single Player Game</button>
+        <button class="buttons" onclick=game_type(1)>Two Player Game</button>
+        <button class="buttons_2" onclick=shape_type(0)>X</button>
+        <button class="buttons_2" onclick=shape_type(1)>O</button>
+        <button class="buttons_3" onclick=whoGoesFirst(0)>You</button>
+        <button class="buttons_3" onclick=whoGoesFirst(1)>Computer</button>
+    </div>
+    <br>
+    <div class="play-area">
+        <p>
+        <button class="play-area-boxes" onclick=game(0)></button>
+        <button class="play-area-boxes" onclick=game(1)></button>
+        <button class="play-area-boxes" onclick=game(2)></button>
+        <br>
+        <button class="play-area-boxes" onclick=game(3)></button>
+        <button class="play-area-boxes" onclick=game(4)></button>
+        <button class="play-area-boxes" onclick=game(5)></button>
+        <br>
+        <button class="play-area-boxes" onclick=game(6)></button>
+        <button class="play-area-boxes" onclick=game(7)></button>
+        <button class="play-area-boxes" onclick=game(8)></button>
+        <br>
+    </p>
+    </div>
+</body>
+</html>
