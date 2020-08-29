@@ -15,9 +15,8 @@ function shuffleArray(array) {
          
     return array; 
  } 
- 
 function game_type(x)
-{
+{   
     var options = document.getElementsByClassName("buttons");
     single_player = x;
     for(var i=0;i<2;i++)
@@ -379,7 +378,10 @@ function check_winNoprint(turn)
 function single_player_game(x)
 {
     if((count%2===0 && first===0) || (count%2===1 && first===1))
-    {
+    {   
+        $(document).ready(function(){
+            $($(".play-area-boxes")[x]).css("background-color","blue");
+        });
         document.getElementsByClassName("play-area-boxes")[x].innerText = characters[character];
         tictac[x] = characters[character];
         console.log(tictac);
