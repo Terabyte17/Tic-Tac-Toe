@@ -2,6 +2,8 @@ var single_player = 0;
 var character = 0;
 var characters = ['X','O'];
 var characterSecond = 1;
+var game_counter=0;
+var shape_counter=0;
 function shuffleArray(array) { 
     for (var i = array.length - 1; i > 0; i--) {  
      
@@ -15,6 +17,7 @@ function shuffleArray(array) {
          
     return array; 
  } 
+
 function game_type(x)
 {   
     var options = document.getElementsByClassName("buttons");
@@ -36,6 +39,7 @@ function game_type(x)
     {
         new_options[j].style.display = "block";
     }
+    game_counter=1;
 }
 function shape_type(x)
 {
@@ -59,9 +63,10 @@ function shape_type(x)
     {
         new_options[j].style.display="block";
     }
-    
+    shape_counter = 1;
 }
 var first=0;
+var first_counter = 0;
 function whoGoesFirst(x)
 {   
     var options = document.getElementsByClassName("buttons_3");
@@ -80,10 +85,21 @@ function whoGoesFirst(x)
         new_options[j].style.display="none";
     }
     first = x;
+    first_counter = 1;
     return;
 }
 function game(x)
 {
+    if(game_counter===0 || shape_counter===0)
+    {
+        alert("Please choose one of the options above!")
+        return;
+    }
+    if(single_player===0 && first_counter===0)
+    {
+        alert("Please choose one of the options above!")
+        return;
+    }
     if(tictac[x]!=='#')
     {
         alert("That cell has already been taken! Chose another!")
