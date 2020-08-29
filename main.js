@@ -409,6 +409,9 @@ function tictac_AI()
 {
     var idealMove = minimax(1,tictac);
     var idealPos = idealMove.position;
+    $(document).ready(function(){
+        $($(".play-area-boxes")[idealPos]).css("background-color","green");
+    });
     document.getElementsByClassName("play-area-boxes")[idealPos].innerText = characters[characterSecond];
     tictac[idealPos] = characters[characterSecond];
 }
