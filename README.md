@@ -1,3 +1,4 @@
 <h1> Tic Tac Toe </h1>
 <p>This is my first attempt at building a website, in which, I created a <b>Tic-Tac-Toe</b> game which has multiple options regarding  the choice of single-player/multi-player game, as well as, which shape to choose i.e. X or O. I've also added the option of who will move first in a single player game:- the player or the computer. <p>
 <p>For the single player game, the computer is unbeatable, as I used the minimax algorithm(used to solve zero sum games with considerably less states) to solve the problem of choosing the optimal move. HTML was used for building the content of the website, CSS for styling and JS for implementing the tic-tac-toe game. I used DOM manipulation in JS to interact with the HTML elements.<p>
+<p>I've also added Jquery, so as to change the color of the cells which are clicked upon so that people are able to distinguish easily between the cells and also to make it a bit appealing in terms of presentation.</p>
